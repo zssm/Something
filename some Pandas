@@ -1,0 +1,17 @@
+df[df.isnull()]  #返回的是个true或false的Series对象（掩码对象），进而筛选出我们需要的特定数据。
+df[df.notnull()]
+
+df.dropna()     #将所有含有nan项的row删除
+df.dropna(axis=1,thresh=3)  #将在列的方向上三个为NaN的项删除
+df.dropna(how='ALL') 
+
+-----------------------
+drop函数的使用
+（1）drop函数的使用：删除行、删除列
+print frame.drop(['a'])
+print frame.drop(['Ohio'], axis = 1)
+
+drop函数默认删除行，列需要加axis = 1
+
+（2）drop函数的使用：inplace参数
+！
